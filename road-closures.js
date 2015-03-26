@@ -17,7 +17,6 @@ require(["BcGisQuery", "jquery", "footable", "mustache"], function (BcGisQuery, 
         outfields: [
             "CLOSURE_ID", "FIRST_ROAD_CLOSURE_DATE", "FIRST_CLOSURE_TYPE", "FIRST_STLABEL", "FIRST_INTERSECTIONLIST", "FIRST_COMMUNITY"],
         resultsContainer: 'results',
-        //serviceUrl: "http://arcgisdev101/arcgis/rest/services/Apps/RoadClosure/MapServer/0",
         serviceUrl: "http://gis.baltimorecountymd.gov/arcgis/rest/services/Apps/RoadClosureProd/MapServer/0",
         template: template
     });
@@ -36,7 +35,6 @@ require(["BcGisQuery", "jquery", "footable", "mustache"], function (BcGisQuery, 
             outfields: [
                 "CLOSURE_ID", "ROAD_CLOSURE_DATE", "CLOSURE_TYPE ", "CLOSED_ROAD_NAME ", "CROSS_ST_1", "CROSS_ST_2", "COMMUNITY"],
             resultsContainer: 'unmapped-results',
-            //serviceUrl: "http://arcgisdev101/arcgis/rest/services/Apps/RoadClosure/MapServer/3",
             serviceUrl: "http://gis.baltimorecountymd.gov/arcgis/rest/services/Apps/RoadClosureProd/MapServer/3",
             template: template
         });
@@ -46,8 +44,6 @@ require(["BcGisQuery", "jquery", "footable", "mustache"], function (BcGisQuery, 
                 var html = Mustache.render(template, results);
 
                 $('.results table').append(html);
-            } else {
-                //alert('No Results');
             }
 
             $('.footable').footable();
